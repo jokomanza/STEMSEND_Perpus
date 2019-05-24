@@ -21,9 +21,8 @@ public class koneksi {
     public Connection getConnection() {
         try {
             if (koneksi == null) {
-//                Driver driver = new Driver();
-                Class.forName("com.mysql.jdbc.Driver");
-                koneksi = DriverManager.getConnection("jdbc:mysql://localhost:3306/Database_STEMSEND_Perpus", "root", "");
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                koneksi = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Database_STEMSEND_Perpus?useUnicode=yes&characterEncoding=UTF-8&useSSL=false", "root", "root");
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Gagal koneksi ke Server\n" + ex);
