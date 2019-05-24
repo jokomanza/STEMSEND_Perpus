@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e801916-4a95-42a9-b713-d537d8403948">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tblsiswa.`nis` AS tblsiswa_nis,
+     tblsiswa.`email` AS tblsiswa_email,
+     tblsiswa.`alamat` AS tblsiswa_alamat,
+     tblsiswa.`telepon` AS tblsiswa_telepon,
+     tblsiswa.`kelas` AS tblsiswa_kelas,
+     tblsiswa.`nama_siswa` AS tblsiswa_nama_siswa,
+     tblsiswa.`kelamin` AS tblsiswa_kelamin
+FROM
+     `tblsiswa` tblsiswa]]>
+	</queryString>
+	<field name="tblsiswa_nis" class="java.lang.String"/>
+	<field name="tblsiswa_nama_siswa" class="java.lang.String"/>
+	<field name="tblsiswa_email" class="java.lang.String"/>
+	<group name="tblsiswa_nis">
+		<groupExpression><![CDATA[$F{tblsiswa_nis}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="18" forecolor="#666666" backcolor="#E6E6E6" uuid="955c575b-deb5-408f-af9f-11777c3580a9"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[NIS]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="18" forecolor="#006699" backcolor="#E6E6E6" uuid="a0218b11-417c-458f-9708-faafbdd0d7ce"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tblsiswa_nis}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="tblsiswa_nama_siswa">
+		<groupExpression><![CDATA[$F{tblsiswa_nama_siswa}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<staticText>
+					<reportElement x="0" y="1" width="100" height="20" forecolor="#666666" uuid="84a13c4a-82b3-48cf-bf76-368896d2afdb"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Nama Siswa]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="1" width="455" height="20" forecolor="#006699" uuid="146acc59-a576-4827-b9ee-16a9c2243e24"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tblsiswa_nama_siswa}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="tblsiswa_email">
+		<groupExpression><![CDATA[$F{tblsiswa_email}]]></groupExpression>
+		<groupHeader>
+			<band height="22">
+				<textField>
+					<reportElement x="100" y="0" width="455" height="20" forecolor="#006699" uuid="2e232288-a6dd-4861-8bef-b93bf21f0ec4"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tblsiswa_email}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" forecolor="#666666" uuid="b9791435-abd3-40f4-b556-e01663b1e98d"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="7737cda3-4ac4-44c5-91e2-4381e4702076"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="9d9e0e30-3435-46ff-bda5-267897860547"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="875ce385-5792-4b3a-87d9-6f62d6daefde"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="977a295f-b699-4b51-9744-62c09d8204eb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="4d2ed0dd-fbbf-4244-8da6-b4678d37f304"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c9344f45-c286-422f-b206-790cbfb6a2b0"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="46f580d5-f856-4702-abfc-5843772e44f5"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="664f2109-2784-4f66-911c-82408ea74fa6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
